@@ -1,38 +1,79 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Web</title> 
-    <style> 
-        body { 
-            margin: 0; 
-            font-family: Arial, sans-serif; 
-        } 
-        header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            background-color: #333; 
-            color: white; 
-            padding: 10px 20px; 
-        } 
-        .menu-button { 
-            background: none; 
-            border: none; 
-            color: white; 
-            font-size: 18px; 
-            cursor: pointer; 
-        } 
-        .menu-button:focus { 
-            outline: none; 
-        } 
-    </style> 
-</head> 
-<body> 
-    <header> 
-        <button class="menu-button" onclick="alert('Menu button clicked!')">☰</button> 
-        <h1>Web</h1> 
-    </header> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web + Carrd + Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .menu-button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .menu-button:focus {
+      outline: none;
+    }
+
+    .iframe-container {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Optional chatbot floating style */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      border: none;
+      z-index: 9999;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="menu-button" onclick="alert('Menu button clicked!')">☰</button>
+    <h1>Web</h1>
+  </header>
+
+  <!-- 🧩 Embed your Carrd site here -->
+  <div class="iframe-container">
+    <iframe src="https://your-carrd-url.carrd.co" title="Carrd Page"></iframe>
+  </div>
+
+  <!-- 💬 Chatbot Widget -->
+  <iframe 
+    id="chatbot"
+    src="https://your-chatbot-url.com/widget"
+    title="Chatbot Assistant"
+  ></iframe>
+</body>
+</html>
