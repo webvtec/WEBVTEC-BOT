@@ -5,39 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web + Carrd + Chatbot</title>
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
       font-family: Arial, sans-serif;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      height: 30px;
-    }
-
-    .menu-button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-    }
-
-    .menu-button:focus {
-      outline: none;
     }
 
     .iframe-container {
-      flex: 1;
-      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
     }
 
     iframe {
@@ -45,36 +30,18 @@
       height: 100%;
       border: none;
     }
-
-    /* Optional chatbot floating style */
-    #chatbot {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 350px;
-      height: 500px;
-      border: none;
-      z-index: 9999;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
   </style>
 </head>
 <body>
-  <header>
-    <button class="menu-button" onclick="alert('Menu button clicked!')">☰</button>
-    <h1>Web</h1>
-  </header>
 
-<!-- 🧩 Embed your Carrd site here -->
-<div class="iframe-container">
-  <iframe src="https://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page"></iframe>
-</div>
+  <!-- ✅ Fullscreen Carrd Embed -->
+  <div class="iframe-container">
+    <iframe src="https://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page"></iframe>
+  </div>
 
-  <!-- 💬 Chatbot Widget -->
-  <iframe 
-    id="ec564e2c-d273-4c13-89df-308eff99c2a1"
-    src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.json"
-    title="Chatbot Assistant"
-  ></iframe>
+  <!-- 💬 Botpress Chat Widget -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.js"></script>
+
 </body>
 </html>
