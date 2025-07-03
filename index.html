@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web + Chatbot</title>
+  <title>Web + Carrd + Chatbot</title>
   <style>
     body {
       margin: 0;
@@ -35,9 +35,15 @@
       outline: none;
     }
 
-    .main-content {
+    .iframe-container {
       flex: 1;
-      padding: 20px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -47,9 +53,9 @@
     <h1>Web</h1>
   </header>
 
-  <div class="main-content">
-    <p>Welcome to your coding assistant!</p>
-    <p>You can type requests like "Build me a portfolio site" and I’ll generate the code and GitHub steps.</p>
+  <!-- 🧩 Embed your Carrd site here -->
+  <div class="iframe-container">
+    <iframe src="https://msmxonqnnwkzosiauoqowishbds09288.carrd.co/" title="Carrd Page"></iframe>
   </div>
 
   <!-- 💬 Botpress Chatbot Widget -->
