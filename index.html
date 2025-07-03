@@ -20,7 +20,7 @@
       background-color: #333;
       color: white;
       padding: 10px 20px;
-      height: 40px;
+      height: 30px;
     }
 
     .menu-button {
@@ -45,6 +45,18 @@
       height: 100%;
       border: none;
     }
+
+    /* Optional chatbot floating style */
+    #chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      border: none;
+      z-index: 9999;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -53,13 +65,16 @@
     <h1>Web</h1>
   </header>
 
-  <!-- 🧩 Embed your Carrd site here -->
-  <div class="iframe-container">
-    <iframe src="hhttps://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page"></iframe>
-  </div>
+<!-- 🧩 Embed your Carrd site here -->
+<div class="iframe-container">
+  <iframe src="https://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page"></iframe>
+</div>
 
-  <!-- 💬 Botpress Chatbot Widget -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.js"></script>
+  <!-- 💬 Chatbot Widget -->
+  <iframe 
+    id="ec564e2c-d273-4c13-89df-308eff99c2a1"
+    src="https://cdn.botpress.cloud/webchat/v3.0/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.json"
+    title="Chatbot Assistant"
+  ></iframe>
 </body>
 </html>
