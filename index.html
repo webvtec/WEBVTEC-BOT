@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web + Carrd + Chatbot</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web + Carrd + Chatbot</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
 
-    .iframe-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
+    .iframe-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Fullscreen Carrd Embed -->
-  <div class="iframe-container">
-    <iframe src="https://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page"></iframe>
-  </div>
+  <!-- ✅ Fullscreen Carrd Embed -->
+  <div class="iframe-container">
+    <iframe src="https://phcoyxifcgkxktktsktzkgxkttsktstk.carrd.co/" title="Carrd Page" allowfullscreen></iframe>
+  </div>
 
-  <!-- 💬 Botpress Chat Widget -->
-  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.js"></script>
+  <!-- 💬 Chatbot Widget (floating on top) -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/07/02/11/20250702110153-7TUAQB8G.js"></script>
 
 </body>
 </html>
